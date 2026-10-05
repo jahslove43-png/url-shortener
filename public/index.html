@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shortly | Shorten links instantly</title>
+    <meta
+      name="description"
+      content="Shortly helps you shorten long URLs into shareable links in seconds."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <div class="brand">
+          <span class="brand-mark">S</span>
+          <span>Shortly</span>
+        </div>
+
+        <nav class="nav-links">
+          <a href="#features">Features</a>
+          <a href="#recent">Recent</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Share smarter</span>
+            <h1>Shorten long links and make them memorable.</h1>
+            <p>
+              Turn even the longest URLs into clean, shareable links in one click.
+            </p>
+
+            <form id="shortener-form" class="shortener-form">
+              <input
+                id="url-input"
+                type="text"
+                name="url"
+                placeholder="Paste a long URL here"
+                aria-label="Paste a long URL"
+                required
+              />
+              <button type="submit">Shorten</button>
+            </form>
+
+            <div id="result" class="result hidden" aria-live="polite">
+              <p>Your short link:</p>
+              <div class="result-row">
+                <a id="short-link" href="#" target="_blank" rel="noreferrer"></a>
+                <button type="button" id="copy-btn" class="copy-btn">
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-panel">
+            <div class="panel-card">
+              <div class="mini-label">Link stats</div>
+              <div class="stats">
+                <div>
+                  <strong>1.4M+</strong>
+                  <span>Links created</span>
+                </div>
+                <div>
+                  <strong>92%</strong>
+                  <span>faster sharing</span>
+                </div>
+                <div>
+                  <strong>24/7</strong>
+                  <span>always ready</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="features">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Why use Shortly</span>
+            <h2>Built for quick sharing.</h2>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <div class="feature-icon">⚡</div>
+              <h3>Fast</h3>
+              <p>Create a short link in seconds with a simple paste-and-click flow.</p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-icon">🔗</div>
+              <h3>Clean</h3>
+              <p>Make long URLs easier to read, share, and remember.</p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-icon">📈</div>
+              <h3>Trackable</h3>
+              <p>Each short link records total clicks for a basic analytics view.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="recent" class="recent">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Recent links</span>
+            <h2>Latest shortened URLs</h2>
+          </div>
+
+          <ul id="links-list" class="links-list"></ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 Shortly. Short links, simplified.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
